@@ -179,7 +179,7 @@ impl EntityQueryFieldBuilder {
             context: self.context,
         };
 
-        let object_name = pluralize_unique(&entity_object.type_name::<T>(), true);
+        let object_name = entity_object.type_name::<T>();
         let object_name_ = object_name.clone();
         let type_name = connection_object_builder.type_name(&object_name);
 
